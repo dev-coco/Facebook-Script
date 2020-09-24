@@ -7,7 +7,7 @@ var nowDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getD
 for (var i=0;i<c.length;i++){
     var friends = c[i].replace(/Friend Requests|加好友请求/g,"");
     (function(i){
-        document.write("<table><tbody><tr><td>" + nowDate + "</td><td></td><td>" + f[0] + "</td><td>" + i + "</td><td>" + friends + "</td><td>" + b[i] + "</td></tr></tbody></table>");
+        document.write("<table><tbody><tr><td>" + nowDate + "</td><td></td><td>" + f[0] + "</td><td></td><td>" + i + "</td><td>" + friends + "</td><td></td><td></td><td>" + b[i] + "</td></tr></tbody></table>");
     })(i)
 }
 var d = document.documentElement.outerHTML;
