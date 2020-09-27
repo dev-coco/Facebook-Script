@@ -1,10 +1,13 @@
 # Facebook-Script & Facebook脚本
 
+* Auto-Add-Friends & 自动加好友
+  - 自动加系统推荐的好友。[链接](https://m.facebook.com/friends/center/suggestions)
+  
 * Auto-Scroll & 页面自动滚动
   - 第一次运行自动滚动，再次运行停止滚动，以此类推。
 
 * Cancel_Request & 取消请求
-  - 取消发送出去的好友请求。
+  - 取消发送出去的好友请求。[链接](https://mobile.facebook.com/friends/center/requests/outgoing/)
 
 * Friend-Count & 好友统计
   - 统计所有的好友名字和链接并且输出。
