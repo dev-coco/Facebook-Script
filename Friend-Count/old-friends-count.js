@@ -1,17 +1,20 @@
-var html = document.documentElement.outerHTML;
-var c = html.match(/(?<=alt="" aria-label=").*?(?=" role="img">)/g);
-var url = html.match(/(?<=class="_5q6s _8o _8t lfloat _ohe" href=")https:\/\/www.facebook.com\/.*?(?=.fref|&amp)/g);
-var account = html.match(/(?<=<span class="_1vp5">).*?(?=<\/span>)/g);
-var date = new Date();
-var nowDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-for (var i = 0, j = 0; i < c.length, j < url.length; i++, j++) {
-    document.write("<table><tbody><tr><td>" + nowDate + "</td><td></td><td>" + account + "</td><td></td><td>" + [i] + "</td><td>" + c[i] + "</td><td></td><td></td><td>" + url[j] + "</td></tr></tbody></table>");
-}
-var d = document.documentElement.outerHTML;
-var e = d.replace(/<div class="simplemarker-mark" style="background-color: rgba\(255, 255, 255, 0\); display: inline; text-align: center; color: red; padding: 2px;">|<\/div>|\uD83D[\uDC00-\uDE4F]/g, "");
+var a = document.documentElement.outerHTML;
+var b = a.match(/<div class="_5i_p" id="u_.*?_.*?">.*?"><\/span><\/div><\/div>/g)
+document.write(b[0]);
+var c = document.documentElement.outerHTML;
+var v = c.match(/(?<=data-hovercard="\/ajax\/hovercard\/user\.php\?id=).*?(?=&)/g);
+var e = c.match(/(?<=<a title=").*?(?=")/g)
+var d = c.match(/(?<=data-gt="{.*?}}" href=")http.*?(?=\?fref|&amp)/g);
 document.open();
 document.clear();
 document.close();
-for (var i = 0; i < e.length; i++) {
-    document.write(e[i]);
+var f = prompt("请输入点赞类型", "");
+for (var k = 0, j = 0, h =0; k < d.length, j < e.length, h < v.length; k++, j++, h++) {
+    document.write("<table><tbody><tr><td>=IMAGE(\"http://graph.facebook.com/" +v[h*2]+ "/picture?width=1080\")</td><td>" + f + "</td><td><a href=\"" + d[k] + "\">" + e[j] + "</a></td><td>" + d[k] + "</td></tr></tbody></table>");
 }
+var g = document.documentElement.outerHTML;
+document.open();
+document.clear();
+document.close();
+var u = g.replace(/undefined.+/g,"").replace(/[^>]+(?!.*<table)>.+/g,"");
+document.write(u);
