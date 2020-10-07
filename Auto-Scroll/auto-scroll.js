@@ -1,9 +1,16 @@
+function getRandom(n, m) {
+    var num = Math.floor(Math.random() * (m - n + 1) + n)
+    return num
+}
+var ramdom_number = getRandom(5, 30)
 if (enbledscroll == '1') {
     var enbledscroll = '0';
     clearInterval(autoscroll);
 } else {
     var enbledscroll = '1';
+    var position = 0;
     var autoscroll = setInterval(function() {
-        window.scrollTo(0, document.body.scrollHeight)
-    }, 1500);
+        position += 10;
+        scroll(0, position);
+    }, getRandom);
 }
