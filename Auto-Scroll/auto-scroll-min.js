@@ -1,0 +1,1 @@
+javascript:function getRandom(o,l){return Math.floor(Math.random()*(l-o+1)+o)}var ramdom_number=getRandom(5,30);if("1"==enbledscroll){var enbledscroll="0";clearInterval(autoscroll)}else{enbledscroll=1;var position=document.body.scrollHeight,autoscroll=setInterval(function(){scroll(0,position+=10)},getRandom)}
