@@ -20,6 +20,9 @@
 
 * Like-Count & 点赞统计
   - 统计所有点赞人员的名字和链接并且输出。
+  
+* Messenger-Big-Avatar & Messenger大头像
+  - 放大在Messenger中已读用户的头像。
 
 * Reorganize-Hyperlink & 重组链接
   - 把Excel表格里面的名字和链接合并为带超链接的文本。
@@ -27,3 +30,5 @@
 * View-Photos-Likes & 查看照片和点赞
   - 查看用户的所有照片和所有点赞，自动切换。
 
+* Watch-Party-Auto-Invite & 开包厢自动邀请
+  - 在开包厢的时候，自动批量邀请好友。
