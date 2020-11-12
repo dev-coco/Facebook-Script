@@ -1,5 +1,8 @@
 # Facebook-Script & Facebook脚本
 
+* All-Friends-Info & 所有好友信息
+  - 导出所有好友的信息（头像、名字、链接、ID）。需要先打开此链接：https://graph.facebook.com/v8.0/me/friends?access_token=替换值&pretty=0&limit=999999
+  
 * Auto-Add-Friends & 自动加好友
   - 自动加系统推荐的好友。[链接](https://m.facebook.com/friends/center/suggestions)
   
