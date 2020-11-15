@@ -3,7 +3,7 @@ var inputs = document.querySelectorAll('[class*="_71u9"][class*="_4jy0"][class*=
     var num = Math.floor(Math.random() * (m - n + 1) + n)
     return num
 }
-var ramdom_number = getRandom(10000, 20000)
+var ramdom_number = getRandom(5000, 10000)
 for (var i=0;i<inputs.length;i++){
         (function(i) {
         setTimeout(function() {
