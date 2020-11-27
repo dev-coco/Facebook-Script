@@ -6,7 +6,7 @@ var all_member = a.match(/(?<=group_member_profiles.*?count":).*?(?=\})/g)[0];
 var new_member = a.match(/(?<=group_new_member_profiles":{"count":).*?(?=\})/g)[0];
 var group_status = a.match(/(?<=privacy_info.*?text":").*?(?="\})/g)[0];
 var group_name = a.match(/(?<=isProfile":"Group","name":").*?(?=",")/g)[0];
-var url = (location.href+"/").match(/http.+oups\/.*?\//g);
+var url = (location.href+"/").match(/http.+oups\/.*?\//g)[0].replace(/\/$/g,"");
 var keyword = RegExp(/god|bible|church|fellowship|christ|baptist|presbyterian|gospel|catholic|holy|jesus|lord|ministry|kingdom|religion/);
 var check_keyword = keyword.test(group_name.toLowerCase());
 if (check_keyword == true) {
