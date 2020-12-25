@@ -5,9 +5,13 @@ for (var k = 0; k < url.length; k++) {
         setTimeout(async function() {
             let response = await fetch(url[k])
             let text = await response.text()
-            let matches = text.match(/"userID":"([0-9]+)/g)
-            let facebookID = matches ? matches.sort((a, b) => matches.filter(v => v == a).length - matches.filter(v => v == b).length).pop().slice('"userID":"'.length).slice(0, -1) : ''
-            document.write(""+facebookID+"<br>");
+            let facebookID = text.match(/(?<="userVanity":").*?(?=")/g)[0]
+            if (facebookID.length == 0) {
+                facebookID = url[k].replace(/.+com\//g, "");
+                document.write("<a href=\"https://www.facebook.com/profile.php?id=" + facebookID + "\">https://www.facebook.com/profile.php?id=" + facebookID + "</a><br>");
+            } else {
+                document.write("<a href=\"https://www.facebook.com/" + facebookID + "\">https://www.facebook.com/" + facebookID + "</a><br>");
+            }
         }, 1500 * k);
     })(k);
 }
