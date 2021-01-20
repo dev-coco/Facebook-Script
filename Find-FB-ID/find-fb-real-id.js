@@ -1,20 +1,14 @@
 var person = prompt("请输入", "");
-var url = person.match(/[0-9].+/g);
-for (var k = 0; k < url.length; k++) {
+var get_url = person.match(/.+/g);
+for (var k = 0; k < get_url.length; k++) {
     (function(k) {
         setTimeout(async function() {
-            let response = await fetch(url[k])
-            let text = await response.text()
+            let response = await fetch("https://www.facebook.com/"+get_url[k])
+            let real_url = response.url.replace(/\/$/g,"");
             try {
-                let facebookID = text.match(/(?<="userVanity":").*?(?=")/g)[0]
-                if (facebookID.length == 0) {
-                    facebookID = url[k].replace(/.+com\//g, "");
-                    document.write("<a href=\"https://www.facebook.com/profile.php?id=" + facebookID + "\">https://www.facebook.com/profile.php?id=" + facebookID + "</a><br>");
-                } else {
-                    document.write("<a href=\"https://www.facebook.com/" + facebookID + "\">https://www.facebook.com/" + facebookID + "</a><br>");
-                }
+              document.write(`<table><tbody><tr><td>`+[k+1]+`</td><td><a href="` + real_url + `">` + real_url + `</a></td></tr></tbody></table>`);
             } catch {
-                document.write("<br>");
+                document.write(`<table><tbody><tr><td>`+[k+1]+`</td><td>识别不到</td></tr></tbody></table>`);
             }
         }, 1500 * k);
     })(k);
