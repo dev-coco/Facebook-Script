@@ -4,8 +4,10 @@ for (var i = 0; i < get_user.length; i++) {
     try {
         var check_url = get_user[i].outerHTML.match(/(?<=gpro0wi8" href=").*?(?=" role="link")/g)[0];
     } catch {
-        var in_active = get_user[i].outerHTML.match(/(?<=lrazzd5p oo9gr5id".*?>).*?(?=<\/span>)/g)[0];
-        new_page.document.write(in_active + "<br>");
+        try {
+            var in_active = get_user[i].outerHTML.match(/(?<=lrazzd5p oo9gr5id".*?>).*?(?=<\/span>)/g)[0];
+            new_page.document.write(in_active + "<br>");
+        } catch {}
     }
 }
-new_page.document.write("不活跃账号检测完成！");
+new_page.document.write("不活跃账号检测完成。");
