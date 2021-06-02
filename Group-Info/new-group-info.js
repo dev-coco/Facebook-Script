@@ -21,6 +21,13 @@ var group_create_date_str = eval("'"+group_create_date+"'");
 var group_description = get_data.match(/(?<=description_with_entities":{"text":").*?(?=","delight_ranges)/g)[0];
 var group_description_str = eval("`"+group_description+"`");
 var group_title = get_data.match(/<title.*?title>/g)[0].replace(/<.*?>| \| Facebook|\(.*?\) /g,"");
+var keyword = RegExp(/god|bible|church|fellowship|christ|baptist|presbyterian|gospel|catholic|holy|jesus|lord|ministry|kingdom|religion/);
+var check_keyword = keyword.test(group_title.toLowerCase());
+if (check_keyword == true) {
+	var religion = "宗派";
+} else {
+	var religion = "外邦";
+}
 var group_id = get_data.match(/(?<="groupID":").*?(?=")/g)[0];
 var group_status = get_data.match(/(?<=privacy_info.+text":").*?(?="})/g)[0];
 var group_status_str = eval("'"+group_status+"'");
@@ -35,4 +42,4 @@ try {
 } catch {
 	var group_location_str = "";
 }
-document.write(`<table><tbody><tr><td style="font-size:0px;">=IMAGE("`+group_avator+`")</td><td>`+group_title+`</td><td>`+group_id+`</td><td>`+group_member+`</td><td>`+group_last_month_post+`</td><td>`+group_today_post+`</td><td>`+group_new_member+`</td><td>`+group_create_date_str+`</td><td>`+group_status_str+`</td><td style="font-size:0px;">`+group_description_str+`</td><td>`+group_location_str+`</td><td>`+group_admin_count+`</td></tr></tbody></table>`);
+document.write(`<table><tbody><tr><td style="font-size:0px;">=IMAGE("`+group_avator+`")</td><td>`+group_title+`</td><td>`+religion+`</td><td>`+group_id+`</td><td>`+group_member+`</td><td>`+group_last_month_post+`</td><td>`+group_today_post+`</td><td>`+group_new_member+`</td><td>`+group_create_date_str+`</td><td>`+group_status_str+`</td><td style="font-size:0px;">`+group_description_str+`</td><td>`+group_location_str+`</td><td>`+group_admin_count+`</td></tr></tbody></table>`);
