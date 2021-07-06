@@ -1,1 +1,0 @@
-javascript:var b=(a=document.documentElement.outerHTML).match(/ios:url/g);if("ios:url"==b){var a,c=(a=document.documentElement.outerHTML).match(/(?<=fb:\/\/profile\/).*?(?=">)/g);document.write(c[0])}else{c=a.match(/(?<=userID":")[0-9].*?[0-9](?=")/g);document.write(c[0])}
