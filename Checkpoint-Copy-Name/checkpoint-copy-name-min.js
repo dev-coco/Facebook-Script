@@ -1,1 +1,0 @@
-javascript:for(var get_data=document.getElementsByClassName("a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5"),get_name="",i=1;i<get_data.length-2;i++)get_name+=get_data[i].outerText+"\n";function copy(e){var t=document.createElement("textarea");document.body.appendChild(t),t.value=e,t.focus(),t.select(),document.execCommand("Copy"),t.remove()}copy(get_name);
