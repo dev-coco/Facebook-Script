@@ -7,6 +7,8 @@
 	- 自动戳一戳好友。[链接](https://www.facebook.com/pokes)
 * Auto-Scroll & 页面自动滚动
 	- 第一次运行自动滚动，再次运行停止滚动。
+* Batch-Submit-Friend-List & 批量提交好友名单
+	- 输入ID批量提交或者删除好友名单。在指定名单的页面使用。https://www.facebook.com/lists/xxxx
 * Cancel_Request & 取消发送请求
 	- 取消发送出去的好友请求。[链接](https://mobile.facebook.com/friends/center/requests/outgoing/)
 * Check-Inactive-Friends & 检测不活跃好友
