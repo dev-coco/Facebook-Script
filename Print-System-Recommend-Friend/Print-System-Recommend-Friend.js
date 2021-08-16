@@ -5,6 +5,11 @@ for (var i = 0; i < get_data.length; i++) {
         var avatar = get_data[i].outerHTML.match(/(?<=src=").*?(?=")/g)[0];
         var user_name = get_data[i].outerHTML.match(/(?<=alt=").*?(?=的头像"|的大頭貼照")/g)[0];
         var user_id = get_data[i].outerHTML.match(/(?<=href=".+_id=).*?(?=")/g)[0].replace(/&amp;/g, "&");
-        new_page.document.write(`<table><tbody><tr><td>${i+1}</td><td style="font-size:0px;">=IMAGE("${avatar}")</td><td>${user_name}</td><td>${user_id}</td></tr></tbody></table>`);
+        try {
+            var user_mark = get_data[i].outerHTML.match(/(?<=simplemarker-mark.*?">).*?(?=<\/div>)/g)[0];
+        } catch {
+            var user_mark = "";
+        }
+        new_page.document.write(`<table><tbody><tr><td>${i+1}</td><td style="font-size:0px;">=IMAGE("${avatar}")</td><td>${user_name}</td><td>${user_id}</td><td>${user_mark}</td></tr></tbody></table>`);
     } catch {}
 }
