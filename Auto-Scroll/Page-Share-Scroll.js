@@ -7,6 +7,6 @@ if (enbledscroll == '1') {
 } else {
     var enbledscroll = 1;
     var autoscroll = setInterval(function() {
-        mood.scrollTo(0, share.scrollHeight)
+        share.scrollTo(0, share.scrollHeight)
     }, 300);
 }
